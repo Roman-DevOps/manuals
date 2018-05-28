@@ -1,0 +1,11 @@
+Edit config.xml file
+sudo vi /var/lib/jenkins/config.xml
+
+-change useSecurity element's value to false, e.g.
+<useSecurity>false</useSecurity>
+
+-Remove authorizationStrategy block
+
+-Restart Jenkins: /etc/init.d/jenkins restart.
+
+-Access Jenkins through URL as usual and reconfigure security again.
