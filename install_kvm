@@ -1,0 +1,20 @@
+Install KVM
+sudo yum install qemu-kvm qemu-img virt-manager libvirt libvirt-python libvirt-client virt-install virt-viewer bridge-utils
+
+Start and enable the libvirtd service
+sudo systemctl start libvirtd
+sudo systemctl enable libvirtd
+
+Run the beneath command to check whether KVM module is loaded or not
+sudo lsmod | grep kvm
+kvm_intel             162153  0
+kvm                   525409  1 kvm_intel
+
+In Case you have Minimal CentOS 7 and RHEL 7 installation , then virt-manger will not start for that you need to install x-window package.
+sudo yum install "@X Window System" xorg-x11-xauth xorg-x11-fonts-* xorg-x11-utils -y
+
+Start machine
+sudo virt-manager
+
+Network settings:
+
